@@ -1,0 +1,43 @@
+\subsection*{Questão 05}
+
+\begin{questionbox}{05}
+  Para a formação de uma equipe de desenvolvimento de um novo sistema de Inteligência Artificial (IA), um gerente de projetos precisa selecionar 4 especialistas de um grupo de 9. 
+
+  No entanto, o grupo contém 3 especialistas que, por terem visões de arquitetura conflitantes, não podem trabalhar juntos no mesmo projeto. 
+
+  De quantas maneiras o gerente pode formar uma equipe de 4 especialistas sem formar qualquer par entre os 3 citados?
+\end{questionbox}
+
+\begin{solutionbox}
+  Sejam os 3 especialistas conflitantes. A restrição implica que não podemos escolher dois ou mais deles simultaneamente. Logo, podemos escolher no máximo 1 desses 3.
+
+  Dividimos em casos:
+
+  \textbf{Caso 1:} Nenhum dos 3 é escolhido.
+
+  Selecionamos os 4 membros apenas dentre os outros 6:
+  \[
+  \binom{6}{4} = 15.
+  \]
+
+  \textbf{Caso 2:} Exatamente 1 dos 3 é escolhido.
+
+  Escolhemos 1 dos 3 e os outros 3 dentre os 6 restantes:
+  \[
+  \binom{3}{1} \cdot \binom{6}{3} = 3 \cdot 20 = 60.
+  \]
+\end{solutionbox}
+
+\newpage
+
+\begin{solutionbox}
+  Somando os casos:
+  \[
+  15 + 60 = 75.
+  \]
+
+  Portanto, o número de equipes possíveis é:
+  \[
+  \boxed{75}.
+  \]
+\end{solutionbox}

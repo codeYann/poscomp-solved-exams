@@ -1,0 +1,39 @@
+\subsection*{Questão 04}
+
+\begin{questionbox}{04}
+  Um processador executa tarefas que são compostas por uma sequência de micro-operações. Existem dois tipos de micro-operações: tipo A, que dura 1 ciclo de clock, e tipo B, que dura 2 ciclos de clock. Uma tarefa é definida pela sequência de micro-operações que a compõe.
+
+  Quantas sequências distintas de micro-operações podem formar uma tarefa com duração total de exatamente 8 ciclos de clock?
+\end{questionbox}
+
+\begin{solutionbox}
+  Seja $f(n)$ o número de sequências que totalizam $n$ ciclos de clock.
+
+  Uma sequência que soma $n$ pode terminar em:
+  \begin{itemize}
+    \item uma operação do tipo A (1 ciclo), restando $n-1$ ciclos;
+    \item uma operação do tipo B (2 ciclos), restando $n-2$ ciclos.
+  \end{itemize}
+
+  Logo, temos a recorrência:
+  \[
+  f(n) = f(n-1) + f(n-2).
+  \]
+
+  Com condições iniciais:
+  \[
+  f(0) = 1, \quad f(1) = 1.
+  \]
+  \end{solutionbox}
+
+  \begin{solutionbox}
+  Calculando iterativamente:
+  \[
+  f(2)=2,\; f(3)=3,\; f(4)=5,\; f(5)=8,\; f(6)=13,\; f(7)=21,\; f(8)=34.
+  \]
+
+  Portanto, o número de sequências distintas é:
+  \[
+  \boxed{34}.
+  \]
+\end{solutionbox}
