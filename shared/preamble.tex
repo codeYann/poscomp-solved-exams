@@ -1,11 +1,7 @@
-% Import this file with \input{../../shared/preamble.tex}
-
-\documentclass[12pt, a4paper]{article}
-
 % Language and encoding
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
+\usepackage[brazilian]{babel}
 
 % Typography improvements
 \usepackage{lmodern}
@@ -22,6 +18,40 @@
 ]{geometry}
 \usepackage{setspace}
 \onehalfspacing
+
+% Colors
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{poscomp-blue}{HTML}{1A3A5C}   % cabeçalhos
+\definecolor{poscomp-gold}{HTML}{C8922A}   % destaque / gabarito
+\definecolor{poscomp-gray}{HTML}{F4F4F4}   % fundo de caixas
+\definecolor{poscomp-green}{HTML}{2E7D32}  % correto / dica
+\definecolor{poscomp-red}{HTML}{C62828}    % erro comum / alerta
+
+% Boxes
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins, breakable}
+ 
+% Caixa: enunciado da questão
+\newtcolorbox{questionbox}[2][]{
+  enhanced, breakable,
+  colback  = poscomp-gray,
+  colframe = poscomp-blue,
+  fonttitle= \bfseries\color{white},
+  title    = {Questão #2},
+  attach boxed title to top left = {yshift=-2mm, xshift=4mm},
+  boxed title style = {colback=poscomp-blue, rounded corners},
+  #1
+}
+
+\newtcolorbox{solutionbox}[1][]{
+  enhanced, breakable,
+  colback  = white,
+  colframe = poscomp-blue!40,
+  fonttitle= \bfseries\color{poscomp-blue},
+  title    = {Resolução},
+  #1
+}
 
 % Figures and graphics
 \usepackage{graphicx}
