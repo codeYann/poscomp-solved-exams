@@ -1,0 +1,95 @@
+\subsection*{Questão 01}
+
+\newcommand{\fourthirds}{\frac{4}{3}}
+
+\begin{questionbox}{01}
+  Utilizando o método de Gauss, determine o valor de $z$ no sistema:
+  \[
+  \left\{
+  \begin{aligned}
+  3x - 3y + z &= -9 \\
+  x + y - z &= 1 \\
+  3x - 5y + z &= 7
+  \end{aligned}
+  \right.
+  \]
+\end{questionbox}
+
+\begin{solutionbox}
+  Escrevemos a matriz aumentada $\left[ A \,\middle|\, b \right]$:
+
+  \[
+  \left[
+  \begin{array}{ccc|c}
+  3 & -3 & 1 & -9 \\
+  1 & 1 & -1 & 1 \\
+  3 & -5 & 1 & 7
+  \end{array}
+  \right]
+  \]
+
+  Permutando $L_{1} \leftrightarrow L_{2}$:
+
+  \[
+  \left[
+  \begin{array}{ccc|c}
+  1 & 1 & -1 & 1 \\
+  3 & -3 & 1 & -9 \\
+  3 & -5 & 1 & 7
+  \end{array}
+  \right]
+  \]
+
+  \end{solutionbox}
+
+  \begin{solutionbox}
+
+  $L_{2} \leftarrow L_{2} - 3L_{1}$ e $L_{3} \leftarrow L_{3} - 3L_{1}$:
+
+  \[
+  \begin{aligned}
+  L_{2} &: (3-3,\,-3-3,\,1+3,\,-9-3) = (0,-6,4,-12) \\
+  L_{3} &: (3-3,\,-5-3,\,1+3,\,7-3) = (0,-8,4,4)
+  \end{aligned}
+  \]
+
+  \[
+  \left[
+  \begin{array}{ccc|c}
+  1 & 1 & -1 & 1 \\
+  0 & -6 & 4 & -12 \\
+  0 & -8 & 4 & 4
+  \end{array}
+  \right]
+  \]
+\end{solutionbox}
+
+\newpage
+
+\begin{solutionbox}
+  $L_{3} \leftarrow L_{3} - \fourthirds L_{2}$:
+
+  \[
+  L_{3} : (0,-8,4,4) - \fourthirds (0,-6,4,-12)
+  = (0,0,-\fourthirds,20)
+  \]
+
+  \[
+  \left[
+  \begin{array}{ccc|c}
+  1 & 1 & -1 & 1 \\
+  0 & -6 & 4 & -12 \\
+  0 & 0 & -\fourthirds & -20
+  \end{array}
+  \right]
+  \]
+
+  Podemos obter $z$ a partir de:
+
+  \[
+  \begin{aligned}
+  -\fourthirds z &= -20 \\
+  z &= 15
+  \end{aligned}
+  \]
+\end{solutionbox}

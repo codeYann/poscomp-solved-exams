@@ -1,0 +1,27 @@
+\subsection*{Questão 03}
+
+\begin{questionbox}{03}
+  Seja o espaço vetorial $\mathbb{R}^3$ com o produto interno usual, dado o vetor $\mathbf{v} = (3,4,0)$ e o subespaço $W$ gerado pelo vetor $\mathbf{w} = (1,0,0)$, a projeção ortogonal de $\mathbf{v}$ sobre $W$ é:
+\end{questionbox}
+
+\newpage
+
+\begin{solutionbox}
+  A projeção ortogonal de $\mathbf{v}$ sobre o subespaço gerado por $\mathbf{w}$ é dada por
+  \[
+  \mathrm{proj}_{W}(\mathbf{v}) = \frac{\langle \mathbf{v}, \mathbf{w} \rangle}{\langle \mathbf{w}, \mathbf{w} \rangle} \mathbf{w}.
+  \]
+
+  Calculando os produtos internos:
+  \[
+  \langle \mathbf{v}, \mathbf{w} \rangle = 3 \cdot 1 + 4 \cdot 0 + 0 \cdot 0 = 3,
+  \]
+  \[
+  \langle \mathbf{w}, \mathbf{w} \rangle = 1^2 + 0^2 + 0^2 = 1.
+  \]
+
+  Portanto,
+  \[
+  \mathrm{proj}_{W}(\mathbf{v}) = \frac{3}{1} \mathbf{w} = 3(1,0,0) = (3,0,0).
+  \]
+\end{solutionbox}
